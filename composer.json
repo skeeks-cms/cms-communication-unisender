@@ -1,0 +1,36 @@
+{
+    "name": "skeeks/cms-communication-unisender",
+    "description": "Unisender Go mailing service driver for skeeks/cms-communication: sending through the API, delivery events by webhook",
+    "keywords": ["yii", "skeeks", "cms", "crm", "email", "mailing", "unisender"],
+    "homepage": "https://cms.skeeks.com/",
+    "type": "yii2-extension",
+    "license": "BSD-3-Clause",
+    "support": {
+        "issues": "https://skeeks.com/",
+        "wiki": "https://cms.skeeks.com/docs/",
+        "source": "https://github.com/skeeks-cms/cms-communication-unisender"
+    },
+    "authors": [
+        {
+            "name": "Semenov Alexander",
+            "email": "semenov@skeeks.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.0",
+        "ext-curl": "*",
+        "ext-json": "*",
+        "skeeks/cms-communication": "^1.19.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "skeeks\\cms\\communication\\unisender\\": "src/"
+        }
+    },
+    "extra": {
+        "config-plugin": {
+            "web": ["src/config/common.php", "src/config/web.php"],
+            "console": ["src/config/common.php", "src/config/console.php"]
+        }
+    }
+}
